@@ -19,10 +19,14 @@ def create_savings_account(balance, interest_rate, months):
     # Create an instance of the `Account` class and pass in the balance and interest parameters.
     #  Hint: You need to add the interest as a value, i.e, 0.
     # ADD YOUR CODE HERE
+    balance = 
+    interest = 0    #FixThis, What is the balance and where do I get that from?
+    account_instace = Account(balance, interest) #FixThis, Seems close, but not sure.
     
     # Calculate interest earned
     # ADD YOUR CODE HERE
-
+    interest = balance * (apr / 100) * (months / 12)
+    print(interest)     #FixThis^, the code seems right, still need the parameters.
 
     # Update the savings account balance by adding the interest earned
     # ADD YOUR CODE HERE
