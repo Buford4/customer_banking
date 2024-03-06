@@ -2,6 +2,8 @@
 # ADD YOUR CODE HERE
 from Account import Account
 
+user_input = input("Enter something: ")
+print("You entered:", user_input)   #FixThis, is this right?
 
 # Define a function for the Savings Account
 def create_savings_account(balance, interest_rate, months):
@@ -19,17 +21,21 @@ def create_savings_account(balance, interest_rate, months):
     # Create an instance of the `Account` class and pass in the balance and interest parameters.
     #  Hint: You need to add the interest as a value, i.e, 0.
     # ADD YOUR CODE HERE
-    balance = 1000  #FixThis, As far as I know, no balance number was given? So I threw in $1,000.
+    balance = 1000  #FixThis, As far as I know, no balance number was given? So I threw in $1,000. 
     interest = 5    #FixThis, Same^, Do not know what this interest rate is supposed to be.
     account_instace = Account(balance, interest) #FixThis, Seems close, but not sure.
     
     # Calculate interest earned
     # ADD YOUR CODE HERE
-    interest = balance * (apr/100) * (months/12) #Says"APR is not defined", How do I define the APR?
+    interest = balance * (interest_rate / 100 ) * (months /12 ) #Says"APR is not defined", How do I define the APR?
     print(interest)     #FixThis^, the code seems right, still need the parameters.
 
     # Update the savings account balance by adding the interest earned
     # ADD YOUR CODE HERE
+    savings_account = SavingsAccount(initial_balance, interest_rate)    #FitThis, I think I'm close, pulled this code snippet from Xpert Learning Assistant. SavingsAccount is undefined, stay with the information in the Module 3 Challenge.
+    print("Intitial Balance:", savings_account.balance)
+    savings_account.update_balance_with_interest()  #FixThis, Do I need to turn SavingsAccount into a class?
+    print("Updated Balance with Interest:", savings_account.balance)
 
     # Pass the updated_balance to the set balance method using the instance of the SavingsAccount class.
     # ADD YOUR CODE HERE
